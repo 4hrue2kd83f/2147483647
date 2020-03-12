@@ -61,6 +61,11 @@ GameManager.prototype.addRandomTile = function () {
   if (this.grid.cellsAvailable() && this.score < 2147483647) {
     var value = Math.max(1, Math.round(((2 * Math.random()) * Math.floor(this.score / 256))));
     value = Math.min(value, 2147483647 - this.score);
+    if (value == 1) {
+      if (Math.random() > 0.9) {
+        value = 2
+      }
+    }
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
