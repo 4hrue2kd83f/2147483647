@@ -81,7 +81,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   inner.classList.add("tile-inner");
 
   inner.textContent = tile.value;
-  if (tile.value > 99999999) {
+  if (tile.value > 2147483647) {
     inner.textContent = tile.value.toExponential(5);
   }
 
