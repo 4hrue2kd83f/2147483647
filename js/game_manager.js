@@ -4,7 +4,7 @@ function GameManager(size, InputManager, Actuator, ScoreManager) {
   this.scoreManager = new ScoreManager;
   this.actuator     = new Actuator;
 
-  this.startTiles   = 12;
+  this.startTiles   = 8 + Math.round(Math.random() * 8));
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
@@ -157,9 +157,10 @@ GameManager.prototype.move = function (direction) {
   });
 
   if (moved) {
-    this.addRandomTile();
-    this.addRandomTile();
-    this.addRandomTile();
+    if (Math.random() < 0.99) this.addRandomTile();
+    if (Math.random() < 0.90) this.addRandomTile();
+    if (Math.random() < 0.75) this.addRandomTile();
+    if (Math.random() < 0.40) this.addRandomTile();
 
     if (!this.movesAvailable()) {
       this.over = true; // Game over!
