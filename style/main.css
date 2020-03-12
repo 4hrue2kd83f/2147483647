@@ -346,19 +346,19 @@ hr {
     font-size: 45px;}
   .tile.tile-512 .tile-inner {
     color: #f9f6f2;
-    background: #f09609;
+    background: #f65e3b;
     font-size: 40px;}
   .tile.tile-1024 .tile-inner {
     color: #f9f6f2;
-    background: #f09609;
+    background: #f65e3b;
     font-size: 40px;}
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
-    background: #f65e3b;
+    background: #f09609;
     font-size: 40px;}
   .tile.tile-4096 .tile-inner {
     color: #f9f6f2;
-    background: #f65e3b;
+    background: #f09609;
     font-size: 40px;}
   .tile.tile-8192 .tile-inner {
     color: #f9f6f2;
