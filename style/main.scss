@@ -405,7 +405,21 @@ hr {
         }
       }
 	    @else if $power >= 100000 {
+        font-size: 20px;
+
+        @include smaller($mobile-threshold) {
+          font-size: 15px;
+        }
+      }
+	    	    @else if $power >= 10000000 {
         font-size: 15px;
+
+        @include smaller($mobile-threshold) {
+          font-size: 15px;
+        }
+      }
+	    	    @else if $power >= 1000000000 {
+        font-size: 10px;
 
         @include smaller($mobile-threshold) {
           font-size: 15px;
